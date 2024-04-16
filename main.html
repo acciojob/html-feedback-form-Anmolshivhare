@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-   </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, button {
+            padding: 8px;
+            margin-top: 5px;
+            width: 300px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            width: 150px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form action="submit.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
 
-   <body>
- 
-<h1>Feedback Form</h1>
-      <form action="" method="post">
-         <label for="name">Name</label>
-         <input type="text" name="Name" id="name"   required minlength="3" maxlength="50">
-         <label for="Portfolio">Portfolio</label>
-         <input type="url" id="Portfolio" name="Portfolio"   required>
-         <label for="favColor">Favorite Color</label>
-         <input type="color" name="Favorite Color" id="favColor"    >
-         <label for="likeness">Likeness</label>
-         <input type="range" name="Likeness" id="likeness" minlength="1" maxlength="100"    >
+        <label for="portfolio">Portfolio:</label>
+        <input type="url" id="portfolio" name="portfolio" required>
 
-      </form>
+        <label for="favColor">Favorite Color:</label>
+        <input type="color" id="favColor" name="favColor">
 
-   </body>
+        <label for="likeness">Likeness:</label>
+        <input type="range" id="likeness" name="likeness" min="1" max="100">
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
 </html>
